@@ -63,25 +63,16 @@ unsigned long int jouer(unsigned int k , unsigned int n) {
         userTab = getRandomArray(k ,n) ;
         computerTab = getRandomArray(k ,n) ;
         if (areAllHere(userTab , computerTab ,k)){
-            /*
-            printf("Gagné !!!\ncompteur = %ld == " , compteur) ;
-            printf ("user tab est : ") ;
+            
+            printf("Gagné !!!\nNombre d'essais = %ld == " , compteur) ;
+            printf ("Quentin  : ") ;
             afficherTableau(userTab , k) ;
             
-            printf ("computer tab est : ") ;
+            printf ("Euromillion : ") ;
             afficherTableau(computerTab , k) ;
-            printf("\n") ;*/
+            printf("\n") ;
             break ;
         }
-        
-        /*
-        printf("oups !... %d\n" , compteur) ;
-        printf ("user tab est : ") ;
-        afficherTableau(userTab , k) ;
-        printf(" == ") ;
-        printf ("computer tab est : ") ;
-        afficherTableau(computerTab , k) ;
-        printf("\n") ;*/
         compteur ++ ;
         free(userTab);
         free(computerTab);
@@ -98,11 +89,11 @@ int main(int argc, char const *argv[])
 {
     srand(time(0));
     unsigned  long int x =0 ;
-    float y = 1000000.0 ;
-    for (int i=0 ; i< (int)y ; i++) {
-        
-         x+=jouer(2,12) ;
-    }
+    float y = 1.0 ;
+    
+    x+=jouer(2,12) ;    
+    x+=jouer(5,50) ;
+    
     
     printf ("on a essayé %d fois\n" , (int)y) ;
     printf ("la somme est %ld\n" , x ) ;
