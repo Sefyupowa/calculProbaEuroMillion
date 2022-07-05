@@ -51,7 +51,7 @@ void afficherTableau(unsigned int * tab , unsigned int  N){
     
 }
 
-unsigned long int jouer(unsigned int k , unsigned int n) {
+void jouer(unsigned int k , unsigned int n) {
    
     unsigned  long int compteur =1 ;
     
@@ -78,7 +78,7 @@ unsigned long int jouer(unsigned int k , unsigned int n) {
         free(computerTab);
         
     }
-    return compteur ;
+    
 }
 
 
@@ -88,16 +88,12 @@ unsigned long int jouer(unsigned int k , unsigned int n) {
 int main(int argc, char const *argv[])
 {
     srand(time(0));
-    unsigned  long int x =0 ;
-    float y = 1.0 ;
-    
-    x+=jouer(2,12) ;    
-    x+=jouer(5,50) ;
     
     
-    printf ("on a essayé %d fois\n" , (int)y) ;
-    printf ("la somme est %ld\n" , x ) ;
-    printf("La moyenne est %.2f\n" , x/y) ;
+    jouer(2,12) ;    
+    jouer(5,50) ;
+    
+ 
     
     return 0;
 }
